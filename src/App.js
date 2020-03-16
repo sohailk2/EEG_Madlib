@@ -17,6 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Game from './Game'
 import BrainCard from './BrainCard'
+import Scans from './Scans'
 
 function page2() {
   return ("page 2")
@@ -27,8 +28,8 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      men: "Yes",
-      currentTab: "Home"
+      // test: "Yes",
+      // currentTab: "Home"
     }
   }
 
@@ -57,21 +58,19 @@ class App extends React.Component {
 
           </Tab>
         </Tabs> */}
-
+        
         <Navbar bg="light" expand="lg">
           {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="game">Home</Nav.Link>
-              <Nav.Link href="page2">Link</Nav.Link>
-
+              <Nav.Link href="game">Game</Nav.Link>
+              <Nav.Link href="scans">View Data</Nav.Link>
             </Nav>
-
           </Navbar.Collapse>
         </Navbar>
 
-        <Card className="internalPadding" style={{margin: '15px', height: '85vh', borderWidth: '15px'}}>
+        <Card className="internalPadding" style={{margin: '15px', height: '85vh', borderWidth: '15px', overflow: 'scroll'}}>
 
         <Switch>
           <Route exact path="/">
@@ -82,8 +81,9 @@ class App extends React.Component {
               <Game />
             
           </Route>
-          <Route path="/page2">
-              <BrainCard/>
+          <Route path="/scans">
+              {/* <BrainCard/> */}
+              <Scans/>
           </Route>
         </Switch>
         </Card>

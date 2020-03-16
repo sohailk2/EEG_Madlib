@@ -2,7 +2,7 @@ import React from 'react'
 
 // bootstrap
 import { Card, Button, Tab, Tabs } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class Game extends React.Component {
 
@@ -25,7 +25,12 @@ class Game extends React.Component {
             // </Card>
 
             <div style={{margin: '15px 15px 15px 15px'}}>
-                "Game"
+                "Game stuff will go here?"
+                Notes:<br/>
+                maybe keep a set of current things added so every time u click on one the brain components it adds or removes it from set? idek
+                {/* <div style={{backgroundColor: 'grey', height: '1000px' }}>a</div> */}
+
+                
             </div>
             
         )
