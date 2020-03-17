@@ -23,6 +23,10 @@ function page2() {
   return ("page 2")
 }
 
+function Welcome() {
+  return ("Welcome Page")
+}
+
 class App extends React.Component {
 
   constructor() {
@@ -74,7 +78,7 @@ class App extends React.Component {
 
         <Switch>
           <Route exact path="/">
-            <App />
+            <Welcome/>
           </Route>
           <Route path="/game">
            
