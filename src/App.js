@@ -27,6 +27,10 @@ function Welcome() {
   return ("Welcome Page")
 }
 
+function NoMatch() {
+  return ("I can't seem to find this page!")
+}
+
 class App extends React.Component {
 
   constructor() {
@@ -89,6 +93,11 @@ class App extends React.Component {
               {/* <BrainCard/> */}
               <Scans/>
           </Route>
+
+          <Route path="*">
+            <NoMatch />
+          </Route>
+
         </Switch>
         </Card>
 
