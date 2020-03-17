@@ -33,11 +33,15 @@ function NoMatch() {
 
 class App extends React.Component {
 
+
+  
+
   constructor() {
     super()
     this.state = {
       // test: "Yes",
-      // currentTab: "Home"
+      // currentTab: "Home",
+      internalPage: {height: '85vh'}
     }
   }
 
@@ -67,7 +71,7 @@ class App extends React.Component {
           </Tab>
         </Tabs> */}
         
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" style={{opacity: '.8'}}>
           {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -78,7 +82,7 @@ class App extends React.Component {
           </Navbar.Collapse>
         </Navbar>
 
-        <Card className="internalPadding" style={{margin: '15px', height: '85vh', borderWidth: '15px', overflow: 'scroll'}}>
+        <Card className="internalPadding" style={{margin: '15px', height: this.state.internalPage.height, borderWidth: '15px', overflow: 'scroll'}}>
 
         <Switch>
           <Route exact path="/">
@@ -86,12 +90,12 @@ class App extends React.Component {
           </Route>
           <Route path="/game">
            
-              <Game />
+              <Game internalPage = {this.state.internalPage}/>
             
           </Route>
           <Route path="/scans">
               {/* <BrainCard/> */}
-              <Scans/>
+              <Scans internalPage = {this.state.internalPage}/>
           </Route>
 
           <Route path="*">

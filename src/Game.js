@@ -24,15 +24,31 @@ class Game extends React.Component {
             //     </Card.Body>
             // </Card>
 
-            <div style={{margin: '15px 15px 15px 15px'}}>
-                "Game stuff will go here?"
-                Notes:<br/>
-                maybe keep a set of current things added so every time u click on one the brain components it adds or removes it from set? idek
-                {/* <div style={{backgroundColor: 'grey', height: '1000px' }}>a</div> */}
+            // <div style={{backgroundColor: '#6DD3CE', height: '100%'}}>
+            <div>
+                {/* <div style={{ margin: '15px 15px 15px 15px' }}>
+                    "Game stuff will go here?"
+                Notes:<br />
+                    maybe keep a set of current things added so every time u click on one the brain components it adds or removes it from set? idek
+                </div> */}
 
-                
+                {/* http://colormind.io/api-access/
+                has an api for color pallete generation
+                */}
+                <div style={{backgroundColor: '#6DD3CE', height: this.props.internalPage.height}}>
+
+                </div>
+
+                <div style={{backgroundColor: '#C8E9A0', height: this.props.internalPage.height}}>
+
+                </div>
+
+                <div style={{backgroundColor: '#F7A278', height: this.props.internalPage.height}}>
+
+                </div>
             </div>
-            
+
+
         )
     }
 
