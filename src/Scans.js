@@ -23,11 +23,18 @@ class Scans extends React.Component {
 
         //now need to create the rows for display purposes
         //so every three
+        let rowElems = [];
+
         for (var i = 0; i < brainScans.length; i += 3) {
+            
             for (var j = i; j < brainScans.length || j < j + 3; j++) { //so prevent from going out of bounds on every three elems
 
             }
         }
+
+        rowElems.push(<Row style={{paddingBottom: '10px'}}><Col><BrainCard/></Col><Col><BrainCard/></Col><Col><BrainCard/></Col></Row>)
+
+        return rowElems;
     }
 
     render() {
@@ -40,7 +47,7 @@ class Scans extends React.Component {
                 <Container>
                     <Row style={{paddingBottom: '10px'}}>
                         <Col>
-                            <BrainCard/>
+                            <BrainCard internalPage = {this.props.internalPage}/>
                         </Col>
                         <Col>
                         <BrainCard/>
@@ -49,6 +56,7 @@ class Scans extends React.Component {
                         <BrainCard/>
                         </Col>
                     </Row>
+                    
                 </Container>
             </>
         )

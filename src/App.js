@@ -71,18 +71,19 @@ class App extends React.Component {
           </Tab>
         </Tabs> */}
         
-        <Navbar bg="light" expand="lg" style={{opacity: '.8'}}>
+        <Navbar expand="lg" style={{opacity: '1', backgroundColor: 'white', fontSize: '120%'}}>
           {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
+              <Nav.Link href="/">Intro</Nav.Link>
               <Nav.Link href="game">Game</Nav.Link>
               <Nav.Link href="scans">View Data</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
 
-        <Card className="internalPadding" style={{margin: '15px', height: this.state.internalPage.height, borderWidth: '15px', overflow: 'scroll'}}>
+        <Card className="internalPadding" style={{margin: '15px', height: this.state.internalPage.height, borderWidth: '15px', borderColor: 'white', overflow: 'scroll'}}>
 
         <Switch>
           <Route exact path="/">
